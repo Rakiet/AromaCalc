@@ -27,6 +27,7 @@ class ReadyLiquidViewController: UIViewController {
             textLabel.text = "Przygotuj premix oraz bazy. Pamiętaj też o środkach ostrożności i próbówkach lub szczykawkach do odmierzania."
         }
         loadnigStyle()
+        print("\(aroma) \(nicotine)")
     }
     
     @IBAction func nextAction(_ sender: Any) {

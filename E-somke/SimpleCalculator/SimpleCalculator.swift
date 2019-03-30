@@ -63,13 +63,20 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             //nicotine = ilosc wolnego miejsca w butelce
             //aroma = nikotyna w wyjsciowym produkcje
             //nicotineB = jaką nikotyną dysponujesz
-            readyNicotine = (aroma/nicotineB) * (product+nicotine) //ilość bazy nikotynowej do doadania
+            readyNicotine = (aroma/nicotineB) * (product+nicotine)//ilość bazy nikotynowej do doadania
             readyLastBase = nicotine - readyNicotine // dodatkowo baza 0
             readyAroma = product // ilość premixu
+            
         }
         
         
     }
+    
+    @IBAction func createLiquid(_ sender: Any) {
+        
+        
+    }
+    
     
     
     func roundTo(number: Double, precision: Int) -> Double {

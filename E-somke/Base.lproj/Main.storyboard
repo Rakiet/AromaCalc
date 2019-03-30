@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UD9-Ea-gqB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="E_somke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-nA-qt6">
+                                <rect key="frame" x="3" y="20" width="176" height="308"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="moje liquidy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT0-ac-92v">
+                                <rect key="frame" x="16" y="417" width="343" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <rect key="contentStretch" x="0.45000000000000001" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="25"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
+                                <state key="normal" title="Kalkulator" backgroundImage="tlo do kalkulator">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.78412059140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="tlo do kalkulator"/>
+                                <connections>
+                                    <segue destination="im9-s2-MJy" kind="show" id="ibt-be-TYP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-hy-g3U">
+                                <rect key="frame" x="187" y="20" width="180" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Button" image="stworz">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sr3-P0-bhV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Ready Liquid View Controller-->
+        <scene sceneID="fuI-v8-5Sr">
+            <objects>
+                <viewController id="3rC-ci-cH4" customClass="ReadyLiquidViewController" customModule="E_somke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BML-ew-5BL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mEF-E2-mo0">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZX-NB-CUK">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="289"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="21"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nE-Kz-NSt">
+                                        <rect key="frame" x="0.0" y="294" width="343" height="289"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vM7-rt-Ym9">
+                                                <rect key="frame" x="91" y="110" width="160" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FuL-c6-X5m"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="nextAction:" destination="3rC-ci-cH4" eventType="touchUpInside" id="933-sv-ZSo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-Xb-fd0">
+                                                <rect key="frame" x="90" y="199" width="163" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="QoG-tX-py5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="doneAction:" destination="3rC-ci-cH4" eventType="touchUpInside" id="4xh-8a-Cj1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dYT-Xb-fd0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1nE-Kz-NSt" secondAttribute="leading" constant="90" id="1E7-vo-6se"/>
+                                            <constraint firstItem="vM7-rt-Ym9" firstAttribute="leading" secondItem="1nE-Kz-NSt" secondAttribute="leading" constant="91" id="BwN-oX-nvL"/>
+                                            <constraint firstItem="vM7-rt-Ym9" firstAttribute="top" secondItem="1nE-Kz-NSt" secondAttribute="top" constant="110" id="fIV-JO-YnH"/>
+                                            <constraint firstAttribute="trailing" secondItem="vM7-rt-Ym9" secondAttribute="trailing" constant="92" id="i0L-su-BtU"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="dYT-Xb-fd0" secondAttribute="trailing" constant="90" id="iTW-ql-T0X"/>
+                                            <constraint firstAttribute="bottom" secondItem="dYT-Xb-fd0" secondAttribute="bottom" constant="40" id="pco-xu-it4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mEF-E2-mo0" firstAttribute="leading" secondItem="AAB-Kh-QA9" secondAttribute="leading" constant="16" id="Kcn-E0-1xw"/>
+                            <constraint firstItem="mEF-E2-mo0" firstAttribute="top" secondItem="AAB-Kh-QA9" secondAttribute="top" id="NG8-GC-7Ob"/>
+                            <constraint firstItem="AAB-Kh-QA9" firstAttribute="trailing" secondItem="mEF-E2-mo0" secondAttribute="trailing" constant="16" id="WFu-h6-MdS"/>
+                            <constraint firstItem="AAB-Kh-QA9" firstAttribute="bottom" secondItem="mEF-E2-mo0" secondAttribute="bottom" constant="20" id="bFG-dp-T8L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AAB-Kh-QA9"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="dYT-Xb-fd0" id="TdK-Xh-8e1"/>
+                        <outlet property="nextOrReturnButton" destination="vM7-rt-Ym9" id="qJu-kd-6Ml"/>
+                        <outlet property="textLabel" destination="FZX-NB-CUK" id="mf3-Uv-lNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQQ-wa-2L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="886.50674662668678"/>
+        </scene>
+        <!--Simple Calculator-->
+        <scene sceneID="JNP-cd-cWU">
+            <objects>
+                <viewController id="im9-s2-MJy" customClass="SimpleCalculator" customModule="E_somke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hxs-Fq-oxb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TRn-EK-Ykt">
+                                <rect key="frame" x="0.0" y="90" width="375" height="296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ilość gotowego produktu:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuu-Mo-VtP">
+                                        <rect key="frame" x="72.5" y="0.0" width="230" height="30"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ml" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-lP-mmT">
+                                        <rect key="frame" x="169.5" y="38" width="36.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="prepareLiquid:" destination="im9-s2-MJy" eventType="editingDidEnd" id="wqo-6m-xGf"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zawartość nikotyny:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts8-Cv-Wgb">
+                                        <rect key="frame" x="97.5" y="76" width="180.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mg/ml" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-fm-QRX">
+                                        <rect key="frame" x="157" y="114" width="61.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="prepareLiquid:" destination="im9-s2-MJy" eventType="editingDidEnd" id="0tY-7g-mkC"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stężenie aromatu:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-65-QFi">
+                                        <rect key="frame" x="108.5" y="152" width="158.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKw-Db-0Du">
+                                        <rect key="frame" x="171" y="190" width="33" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="prepareLiquid:" destination="im9-s2-MJy" eventType="editingDidEnd" id="cQ0-Xo-RGn"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baza nikotynowa jaką dysponujesz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-Vc-nNK">
+                                        <rect key="frame" x="33" y="228" width="309.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mg/ml" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-oS-2RD">
+                                        <rect key="frame" x="157" y="266" width="61.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="prepareLiquid:" destination="im9-s2-MJy" eventType="editingDidEnd" id="VAa-6s-Put"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-li-Lod">
+                                <rect key="frame" x="147" y="543" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Przygotuj"/>
+                                <connections>
+                                    <segue destination="3rC-ci-cH4" kind="show" identifier="createLiquid" id="d7F-Mb-Fkb"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3E-Gm-ba8">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem tag="1" title="Własna baza" id="UC6-9E-6zC"/>
+                                    <tabBarItem tag="2" title="Premix" id="mfK-5C-1o7"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X3E-Gm-ba8" firstAttribute="leading" secondItem="78J-eI-FTp" secondAttribute="leading" id="5ww-Cf-Quh"/>
+                            <constraint firstItem="78J-eI-FTp" firstAttribute="trailing" secondItem="TRn-EK-Ykt" secondAttribute="trailing" id="M2z-1R-Jqr"/>
+                            <constraint firstItem="78J-eI-FTp" firstAttribute="bottom" secondItem="X3E-Gm-ba8" secondAttribute="bottom" id="Sx6-5w-QWV"/>
+                            <constraint firstItem="TRn-EK-Ykt" firstAttribute="top" secondItem="78J-eI-FTp" secondAttribute="top" constant="26" id="bOL-6a-XKp"/>
+                            <constraint firstItem="TRn-EK-Ykt" firstAttribute="leading" secondItem="78J-eI-FTp" secondAttribute="leading" id="hEm-li-ePM"/>
+                            <constraint firstItem="78J-eI-FTp" firstAttribute="trailing" secondItem="X3E-Gm-ba8" secondAttribute="trailing" id="sjM-Ew-e8R"/>
+                            <constraint firstItem="TRn-EK-Ykt" firstAttribute="centerX" secondItem="78J-eI-FTp" secondAttribute="centerX" id="yVp-Ya-cNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="78J-eI-FTp"/>
+                    </view>
+                    <connections>
+                        <outlet property="cocentrationOfAroma" destination="aKw-Db-0Du" id="frS-x5-UZd"/>
+                        <outlet property="firstLabel" destination="xuu-Mo-VtP" id="ROe-Aq-ssy"/>
+                        <outlet property="fourLabel" destination="0kQ-Vc-nNK" id="YgH-uF-hbK"/>
+                        <outlet property="howProduct" destination="DaA-lP-mmT" id="WR1-sM-Zq0"/>
+                        <outlet property="nicotineBase" destination="2y5-oS-2RD" id="5wf-NO-fRy"/>
+                        <outlet property="nicotineContent" destination="9Kx-fm-QRX" id="KeY-yn-rac"/>
+                        <outlet property="premixBar" destination="mfK-5C-1o7" id="gi3-1D-wFQ"/>
+                        <outlet property="secondLabel" destination="Ts8-Cv-Wgb" id="cKN-Rm-0jh"/>
+                        <outlet property="simpleBaseBar" destination="UC6-9E-6zC" id="rRD-K0-Obb"/>
+                        <outlet property="tabBar" destination="X3E-Gm-ba8" id="TfK-Hq-Vak"/>
+                        <outlet property="thirdLabel" destination="Jfh-65-QFi" id="i5k-Bg-OhX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnM-Tx-NKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="894.60269865067471"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xJz-n0-dwH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UD9-Ea-gqB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DrC-Yi-N7E">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3pr-rO-Alc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95D-XA-wfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moje liquidy" width="135" height="164"/>
+        <image name="stworz" width="203" height="137"/>
+        <image name="tlo do kalkulator" width="396" height="208"/>
+    </resources>
+</document>

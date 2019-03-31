@@ -73,7 +73,11 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             
             if nicotine < readyNicotine{ //Wyrzuca błąd jeżeli ilośc dodanej nikotyny jest większe niż wolne miejsce w butelce
                 self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nie można otrzymać oczekiwanego stężnia nikotyny")
-                
+                self.createButton.isEnabled = false
+                self.createButton.alpha = 0.6
+            } else {
+                self.createButton.isEnabled = true
+                self.createButton.alpha = 1
             }
             
         }
@@ -121,6 +125,8 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             
             textAnimation(text1: "Ilość gotowego produktu:", text2: "Zawartość nikotyny:", text3: "Stężenie aromatu:", text4: "mg/ml", text5: "%")
             tabBarSelected = 1
+            self.createButton.isEnabled = true
+            self.createButton.alpha = 1
         }
         else if(item.tag == 2) {
             

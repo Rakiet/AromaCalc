@@ -20,6 +20,7 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     @IBOutlet weak var nicotineBase: UITextField!
     
     @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var createButton: UIButton!
     
     @IBOutlet weak var simpleBaseBar: UITabBarItem!
     @IBOutlet weak var premixBar: UITabBarItem!
@@ -31,6 +32,8 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     var readyAroma = 0.0
     var readyLastBase = 0.0
     
+    
+    var allFunction = AllFunction()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +44,7 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
         tabBar.selectedItem = tabBar.items![0]
         tabBar.delegate = self
         tabBarSelected = 1
+        loadStyle()
     }
     
     @IBAction func prepareLiquid(_ sender: Any) {
@@ -67,16 +71,17 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             readyLastBase = nicotine - readyNicotine // dodatkowo baza 0
             readyAroma = product // ilość premixu
             
+            if nicotine < readyNicotine{ //Wyrzuca błąd jeżeli ilośc dodanej nikotyny jest większe niż wolne miejsce w butelce
+                self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nie można otrzymać oczekiwanego stężnia nikotyny")
+                
+            }
+            
         }
         
         
     }
     
-    @IBAction func createLiquid(_ sender: Any) {
-        
-        
-    }
-    
+
     
     
     func roundTo(number: Double, precision: Int) -> Double {
@@ -147,5 +152,11 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             self.nicotineContent.alpha = 1
             self.cocentrationOfAroma.alpha = 1
         })
+    }
+    
+    func loadStyle(){
+        createButton.layer.cornerRadius = 12
+        createButton.layer.backgroundColor = UIColor(red:0.11, green:0.67, blue:0.36, alpha:1.0).cgColor
+        createButton.setTitleColor(UIColor.white, for: .normal)
     }
 }

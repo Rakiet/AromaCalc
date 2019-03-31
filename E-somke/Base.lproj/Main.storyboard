@@ -209,7 +209,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Przygotuj"/>
                                 <connections>
-                                    <action selector="createLiquid:" destination="im9-s2-MJy" eventType="touchUpInside" id="vgh-ky-g8y"/>
                                     <segue destination="3rC-ci-cH4" kind="show" identifier="createLiquid" id="d7F-Mb-Fkb"/>
                                 </connections>
                             </button>
@@ -236,6 +235,7 @@
                     </view>
                     <connections>
                         <outlet property="cocentrationOfAroma" destination="aKw-Db-0Du" id="frS-x5-UZd"/>
+                        <outlet property="createButton" destination="5xw-li-Lod" id="fdk-Ex-iYV"/>
                         <outlet property="firstLabel" destination="xuu-Mo-VtP" id="ROe-Aq-ssy"/>
                         <outlet property="fourLabel" destination="0kQ-Vc-nNK" id="YgH-uF-hbK"/>
                         <outlet property="howProduct" destination="DaA-lP-mmT" id="WR1-sM-Zq0"/>

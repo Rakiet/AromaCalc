@@ -10,14 +10,21 @@ import AVFoundation
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
+    var barcode: String?
+    var delegate: IsbnDelegate?
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var skuLabel: UILabel!
+    @IBOutlet weak var mainButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.black
+        loadStyle()
+        mainView.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
+        
         
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
         let videoInput: AVCaptureDeviceInput
@@ -48,9 +55,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
+        previewLayer.frame = mainView.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
+        mainView.layer.addSublayer(previewLayer)
         
         captureSession.startRunning()
     }
@@ -92,8 +99,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func found(code: String) {
-        print("Twój kod to: \(code)")
-        navigationController?.popToRootViewController(animated: true)
+        barcode = code
+        loadStyle()
+        if let sku = barcode{
+            skuLabel.text = sku
+        }else{
+                
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -103,4 +115,29 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
+    
+    @IBAction func endOrSend(_ sender: Any) {//przycisk odpowiedialny za zakonczenie lub przesłanie zdarzenia dalej :D
+        self.delegate?.passData(isbn: barcode!)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func loadStyle() {
+        
+        mainButton.layer.cornerRadius = 12
+        navigationController?.isNavigationBarHidden = true //ukrywanie navibar
+        if let _ = barcode{
+            mainButton.layer.backgroundColor = UIColor(red:0.00, green:0.63, blue:0.03, alpha:1.0).cgColor
+            mainButton.setTitle("Zatwierdź", for: .normal)
+            skuLabel.isHidden = false
+            skuLabel.layer.backgroundColor = UIColor.black.cgColor
+            skuLabel.textColor = UIColor.white
+            skuLabel.layer.cornerRadius = 8
+            skuLabel.alpha = 0.5
+        } else {
+            mainButton.layer.backgroundColor = UIColor(red:0.81, green:0.00, blue:0.00, alpha:1.0).cgColor
+            mainButton.setTitle("Powrót", for: .normal)
+            skuLabel.isHidden = true
+        }
+    }
+    
 }

@@ -22,6 +22,9 @@
                                 <rect key="frame" x="3" y="20" width="176" height="308"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="moje liquidy"/>
+                                <connections>
+                                    <segue destination="eYC-zz-7W3" kind="show" id="ftf-7t-LGu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT0-ac-92v">
                                 <rect key="frame" x="16" y="417" width="343" height="230"/>
@@ -45,9 +48,6 @@
                                 <state key="normal" title="Button" image="stworz">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="fSR-NK-hAW" kind="show" id="Rin-fC-lZ0"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,6 +59,49 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
+        <!--Create Own Liquid-->
+        <scene sceneID="mZe-73-aUh">
+            <objects>
+                <viewController id="eYC-zz-7W3" customClass="CreateOwnLiquid" customModule="E_somke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bts-AR-P4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOz-At-6eG">
+                                <rect key="frame" x="16" y="64" width="343" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">Drogi Marszałku, Wysoka Izbo. PKB rośnie Nikt inny was nie możemy zdradzać iż rozszerzenie naszej działalności organizacyjnej ukazuje nam horyzonty postaw uczestników wobec zadań stanowionych przez organizację. Często niezauważanym szczegółem jest to, że wyeliminowanie korupcji przedstawia interpretującą próbę sprawdzenia dalszych poczynań. Drogi Marszałku, Wysoka Izbo. PKB rośnie. Różnorakie i bogate doświadczenia pozwalają na stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu modelu rozwoju. Obywatelu, dokończenie aktualnych projektów zabezpiecza udział szerokiej grupie w kształtowaniu modelu rozwoju. Nasz projekt. Wyższe założenie ideowe, a także aktualna struktura organizacji zabezpiecza udział szerokiej grupie w przyszłościowe rozwiązania ukazuje nam horyzonty systemu powszechnego uczestnictwa. Reasumując. konsultacja z powodu odpowiednich warunków administracyjno-finansowych. Często niezauważanym szczegółem jest to, iż zakup nowego sprzętu umożliwia w wypracowaniu odpowiednich warunków administracyjno-finansowych. De facto, rozpoczęcie powszechnej akcji kształtowania podstaw powoduje docenianie wag form oddziaływania. Podobnie, usprawnienie systemu zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. Różnorakie i rozwijanie struktur ukazuje nam efekt dalszych poczynań. W sumie utworzenie komisji śledczej do celu. W ten sposób stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu nowych propozycji. Nie chcę państwu niczego sugerować, ale zawiązanie koalicji jest ważne z szerokim.</mutableString>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3V-My-K30">
+                                <rect key="frame" x="32" y="351" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-E2-No4">
+                                <rect key="frame" x="273" y="341" width="75" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bar-code"/>
+                                <connections>
+                                    <segue destination="fSR-NK-hAW" kind="show" id="1oF-9w-z6h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="r8h-Nt-nbB"/>
+                    </view>
+                    <connections>
+                        <outlet property="skuLabel" destination="h3V-My-K30" id="XY2-Mg-0TB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2E-Cx-g7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.4000000000001" y="-616.64167916041981"/>
+        </scene>
         <!--Scanner View Controller-->
         <scene sceneID="sEf-H0-hFp">
             <objects>
@@ -66,13 +109,43 @@
                     <view key="view" contentMode="scaleToFill" id="FJL-Fm-MxO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-8Q-8nN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vux-bl-nrd">
+                                <rect key="frame" x="107" y="550" width="160" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.66403600009999997" blue="0.017256326579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="endOrSend:" destination="fSR-NK-hAW" eventType="touchUpInside" id="dpG-TG-dkf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN5-1b-xLy">
+                                <rect key="frame" x="38" y="610" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7oz-B1-wUR"/>
                     </view>
+                    <connections>
+                        <outlet property="mainButton" destination="vux-bl-nrd" id="7N4-Jw-Lnb"/>
+                        <outlet property="mainView" destination="0jj-8Q-8nN" id="7QE-wV-3u7"/>
+                        <outlet property="skuLabel" destination="GN5-1b-xLy" id="Cbu-pX-EK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3b-rF-bSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024" y="-119"/>
+            <point key="canvasLocation" x="1968.8" y="-617.54122938530736"/>
         </scene>
         <!--Ready Liquid View Controller-->
         <scene sceneID="fuI-v8-5Sr">
@@ -290,6 +363,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar-code" width="250" height="150"/>
         <image name="moje liquidy" width="135" height="164"/>
         <image name="stworz" width="203" height="137"/>
         <image name="tlo do kalkulator" width="396" height="208"/>

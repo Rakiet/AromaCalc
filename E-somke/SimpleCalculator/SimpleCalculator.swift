@@ -123,40 +123,53 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if(item.tag == 1) {
             
-            textAnimation(text1: "Ilość gotowego produktu:", text2: "Zawartość nikotyny:", text3: "Stężenie aromatu:", text4: "mg/ml", text5: "%")
+            textAnimation(text1: "Ilość gotowego produktu:", text2: "Zawartość nikotyny:", text3: "Stężenie aromatu:", text4: "Baza nikotynowa jaką dyskonujesz:", text5: "ml", text6: "mg/ml", text7: "%",text8: "mg/ml")
             tabBarSelected = 1
             self.createButton.isEnabled = true
             self.createButton.alpha = 1
         }
         else if(item.tag == 2) {
             
-            textAnimation(text1: "Ilość premixu:", text2: "Ilość wolnego miejsca w butelce:", text3: "Ilość nikotyny w gotywym produkcje:", text4: "ml", text5: "mg/ml")
+            textAnimation(text1: "Ilość premixu:", text2: "Ilość wolnego miejsca w butelce:", text3: "Ilość nikotyny w gotywym produkcje:", text4: "Baza nikotynowa jaką dyskonujesz:", text5: "ml", text6: "ml", text7: "mg/ml", text8: "mg/ml")
+            tabBarSelected = 2
+        }else if(item.tag == 3) {
+            
+            textAnimation(text1: "Ilość pierwszego liquidu:", text2: "Moc pierwszego liquidu:", text3: "Ilość drugiego liquidu:", text4: "Moc drugiego liquidu:", text5: "ml", text6: "mg/ml", text7: "ml", text8: "mg/ml")
             tabBarSelected = 2
         }
     }
     
-    func textAnimation(text1:String,text2:String,text3:String,text4:String,text5:String){
+    func textAnimation(text1:String,text2:String,text3:String,text4:String,text5:String,text6:String,text7:String,text8:String){
         UIView.animate(withDuration: 1.5, animations: { () -> Void in
             self.firstLabel.alpha = 0
             self.secondLabel.alpha = 0
             self.thirdLabel.alpha = 0
+            self.fourLabel.alpha = 0
+            self.firstTextField.alpha = 0
             self.secondTextField.alpha = 0
             self.thirdTextField.alpha = 0
+            self.fourTextField.alpha = 0
             
         }) { (isCompleted) in
             self.firstLabel.text =  text1
             self.secondLabel.text = text2
             self.thirdLabel.text = text3
-            self.secondTextField.placeholder = text4
-            self.thirdTextField.placeholder = text5
+            self.fourLabel.text = text4
+            self.firstTextField.placeholder = text5
+            self.secondTextField.placeholder = text6
+            self.thirdTextField.placeholder = text7
+            self.fourTextField.placeholder = text8
         }
         
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseInOut, animations: {
             self.firstLabel.alpha = 1
             self.secondLabel.alpha = 1
             self.thirdLabel.alpha = 1
+            self.fourLabel.alpha = 1
+            self.firstTextField.alpha = 1
             self.secondTextField.alpha = 1
             self.thirdTextField.alpha = 1
+            self.fourTextField.alpha = 1
         })
     }
     

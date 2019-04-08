@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadStyle()
     }
 
 
+
+    func loadStyle(){
+        navigationController?.isNavigationBarHidden = true //ukrywanie navibar
+        view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
+    }
 }
 

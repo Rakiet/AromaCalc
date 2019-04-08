@@ -14,10 +14,10 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var thirdLabel: UILabel!
     @IBOutlet weak var fourLabel: UILabel!
-    @IBOutlet weak var howProduct: UITextField!
-    @IBOutlet weak var nicotineContent: UITextField!
-    @IBOutlet weak var cocentrationOfAroma: UITextField!
-    @IBOutlet weak var nicotineBase: UITextField!
+    @IBOutlet weak var firstTextField: UITextField!
+    @IBOutlet weak var secondTextField: UITextField!
+    @IBOutlet weak var thirdTextField: UITextField!
+    @IBOutlet weak var fourTextField: UITextField!
     
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var createButton: UIButton!
@@ -37,10 +37,10 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        howProduct.delegate = self
-        nicotineContent.delegate = self
-        cocentrationOfAroma.delegate = self
-        nicotineBase.delegate = self
+        firstTextField.delegate = self
+        secondTextField.delegate = self
+        thirdTextField.delegate = self
+        fourTextField.delegate = self
         tabBar.selectedItem = tabBar.items![0]
         tabBar.delegate = self
         tabBarSelected = 1
@@ -49,7 +49,7 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     
     @IBAction func prepareLiquid(_ sender: Any) {
         
-        guard let product = Double(howProduct.text!), let nicotine = Double(nicotineContent.text!), let aroma = Double(cocentrationOfAroma.text!), let nicotineB = Double(nicotineBase.text!) else {
+        guard let product = Double(firstTextField.text!), let nicotine = Double(secondTextField.text!), let aroma = Double(thirdTextField.text!), let nicotineB = Double(fourTextField.text!) else {
             print("nie")
             return
         }
@@ -140,23 +140,23 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             self.firstLabel.alpha = 0
             self.secondLabel.alpha = 0
             self.thirdLabel.alpha = 0
-            self.nicotineContent.alpha = 0
-            self.cocentrationOfAroma.alpha = 0
+            self.secondTextField.alpha = 0
+            self.thirdTextField.alpha = 0
             
         }) { (isCompleted) in
             self.firstLabel.text =  text1
             self.secondLabel.text = text2
             self.thirdLabel.text = text3
-            self.nicotineContent.placeholder = text4
-            self.cocentrationOfAroma.placeholder = text5
+            self.secondTextField.placeholder = text4
+            self.thirdTextField.placeholder = text5
         }
         
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseInOut, animations: {
             self.firstLabel.alpha = 1
             self.secondLabel.alpha = 1
             self.thirdLabel.alpha = 1
-            self.nicotineContent.alpha = 1
-            self.cocentrationOfAroma.alpha = 1
+            self.secondTextField.alpha = 1
+            self.thirdTextField.alpha = 1
         })
     }
     
@@ -164,5 +164,6 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
         createButton.layer.cornerRadius = 12
         createButton.layer.backgroundColor = UIColor(red:0.11, green:0.67, blue:0.36, alpha:1.0).cgColor
         createButton.setTitleColor(UIColor.white, for: .normal)
+        navigationController?.isNavigationBarHidden = false
     }
 }

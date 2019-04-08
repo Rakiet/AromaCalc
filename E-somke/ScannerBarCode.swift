@@ -18,6 +18,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var skuLabel: UILabel!
     @IBOutlet weak var mainButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,26 +118,42 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func endOrSend(_ sender: Any) {//przycisk odpowiedialny za zakonczenie lub przesłanie zdarzenia dalej :D
-        self.delegate?.passData(isbn: barcode!)
+        if let sku = barcode{
+            self.delegate?.passData(isbn: sku)
+        }
         self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func refreshScaner(_ sender: Any) {
+        barcode = nil
+        captureSession.startRunning()
+        loadStyle()
+        
     }
     
     func loadStyle() {
         
         mainButton.layer.cornerRadius = 12
         navigationController?.isNavigationBarHidden = true //ukrywanie navibar
+        
+        refreshButton.layer.backgroundColor = UIColor.black.cgColor
+        refreshButton.alpha = 0.5
+        refreshButton.layer.cornerRadius = 25
+        
         if let _ = barcode{
             mainButton.layer.backgroundColor = UIColor(red:0.00, green:0.63, blue:0.03, alpha:1.0).cgColor
             mainButton.setTitle("Zatwierdź", for: .normal)
+            
             skuLabel.isHidden = false
             skuLabel.layer.backgroundColor = UIColor.black.cgColor
             skuLabel.textColor = UIColor.white
             skuLabel.layer.cornerRadius = 8
             skuLabel.alpha = 0.5
+            refreshButton.isHidden = false
         } else {
             mainButton.layer.backgroundColor = UIColor(red:0.81, green:0.00, blue:0.00, alpha:1.0).cgColor
             mainButton.setTitle("Powrót", for: .normal)
             skuLabel.isHidden = true
+            refreshButton.isHidden = true
         }
     }
     

@@ -17,14 +17,16 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     
 
     @IBOutlet weak var skuLabel: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadStyle()
     }
     
+    
     func passData(isbn: String) {
+        
         self.skuLabel.text = isbn
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,6 +34,9 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
         destVC.delegate = self
     }
     
-    
+    func loadStyle(){
+        navigationController?.isNavigationBarHidden = false //ukrywanie navibar
+        view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
+    }
 
 }

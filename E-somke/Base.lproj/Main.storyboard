@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-nA-qt6">
                                 <rect key="frame" x="3" y="20" width="176" height="308"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="moje liquidy"/>
+                                <state key="normal" image="moje liquidy"/>
                                 <connections>
                                     <segue destination="eYC-zz-7W3" kind="show" id="ftf-7t-LGu"/>
                                 </connections>
@@ -45,12 +45,12 @@
                                 <rect key="frame" x="187" y="20" width="180" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <state key="normal" title="Button" image="stworz">
+                                <state key="normal" image="stworz">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="sr3-P0-bhV"/>
@@ -70,7 +70,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOz-At-6eG">
                                 <rect key="frame" x="16" y="64" width="343" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Drogi Marszałku, Wysoka Izbo. PKB rośnie Nikt inny was nie możemy zdradzać iż rozszerzenie naszej działalności organizacyjnej ukazuje nam horyzonty postaw uczestników wobec zadań stanowionych przez organizację. Często niezauważanym szczegółem jest to, że wyeliminowanie korupcji przedstawia interpretującą próbę sprawdzenia dalszych poczynań. Drogi Marszałku, Wysoka Izbo. PKB rośnie. Różnorakie i bogate doświadczenia pozwalają na stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu modelu rozwoju. Obywatelu, dokończenie aktualnych projektów zabezpiecza udział szerokiej grupie w kształtowaniu modelu rozwoju. Nasz projekt. Wyższe założenie ideowe, a także aktualna struktura organizacji zabezpiecza udział szerokiej grupie w przyszłościowe rozwiązania ukazuje nam horyzonty systemu powszechnego uczestnictwa. Reasumując. konsultacja z powodu odpowiednich warunków administracyjno-finansowych. Często niezauważanym szczegółem jest to, iż zakup nowego sprzętu umożliwia w wypracowaniu odpowiednich warunków administracyjno-finansowych. De facto, rozpoczęcie powszechnej akcji kształtowania podstaw powoduje docenianie wag form oddziaływania. Podobnie, usprawnienie systemu zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. Różnorakie i rozwijanie struktur ukazuje nam efekt dalszych poczynań. W sumie utworzenie komisji śledczej do celu. W ten sposób stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu nowych propozycji. Nie chcę państwu niczego sugerować, ale zawiązanie koalicji jest ważne z szerokim.</mutableString>
+                                <string key="text">Drogi Marszałku, Wysoka Izbo. PKB rośnie Nikt inny was nie możemy zdradzać iż rozszerzenie naszej działalności organizacyjnej ukazuje nam horyzonty postaw uczestników wobec zadań stanowionych przez organizację. Często niezauważanym szczegółem jest to, że wyeliminowanie korupcji przedstawia interpretującą próbę sprawdzenia dalszych poczynań. Drogi Marszałku, Wysoka Izbo. PKB rośnie. Różnorakie i bogate doświadczenia pozwalają na stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu modelu rozwoju. Obywatelu, dokończenie aktualnych projektów zabezpiecza udział szerokiej grupie w kształtowaniu modelu rozwoju. Nasz projekt. Wyższe założenie ideowe, a także aktualna struktura organizacji zabezpiecza udział szerokiej grupie w przyszłościowe rozwiązania ukazuje nam horyzonty systemu powszechnego uczestnictwa. Reasumując. konsultacja z powodu odpowiednich warunków administracyjno-finansowych. Często niezauważanym szczegółem jest to, iż zakup nowego sprzętu umożliwia w wypracowaniu odpowiednich warunków administracyjno-finansowych. De facto, rozpoczęcie powszechnej akcji kształtowania podstaw powoduje docenianie wag form oddziaływania. Podobnie, usprawnienie systemu zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. Różnorakie i rozwijanie struktur ukazuje nam efekt dalszych poczynań. W sumie utworzenie komisji śledczej do celu. W ten sposób stałe zabezpieczenie informacyjne naszej kompetencji w wypracowaniu nowych propozycji. Nie chcę państwu niczego sugerować, ale zawiązanie koalicji jest ważne z szerokim.</string>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -126,6 +126,17 @@
                                     <action selector="endOrSend:" destination="fSR-NK-hAW" eventType="touchUpInside" id="dpG-TG-dkf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqF-0j-ZOH">
+                                <rect key="frame" x="280" y="550" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="refresh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshScaner:" destination="fSR-NK-hAW" eventType="touchUpInside" id="3CP-l2-78d"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN5-1b-xLy">
                                 <rect key="frame" x="38" y="610" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -140,6 +151,7 @@
                     <connections>
                         <outlet property="mainButton" destination="vux-bl-nrd" id="7N4-Jw-Lnb"/>
                         <outlet property="mainView" destination="0jj-8Q-8nN" id="7QE-wV-3u7"/>
+                        <outlet property="refreshButton" destination="aqF-0j-ZOH" id="zIB-PL-rFF"/>
                         <outlet property="skuLabel" destination="GN5-1b-xLy" id="Cbu-pX-EK1"/>
                     </connections>
                 </viewController>
@@ -300,6 +312,7 @@
                                 <items>
                                     <tabBarItem tag="1" title="Własna baza" id="UC6-9E-6zC"/>
                                     <tabBarItem tag="2" title="Premix" id="mfK-5C-1o7"/>
+                                    <tabBarItem tag="3" title="Połącz dwa liquidy" id="KjI-q0-xv0"/>
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-li-Lod">
@@ -325,18 +338,18 @@
                         <viewLayoutGuide key="safeArea" id="78J-eI-FTp"/>
                     </view>
                     <connections>
-                        <outlet property="cocentrationOfAroma" destination="aKw-Db-0Du" id="frS-x5-UZd"/>
                         <outlet property="createButton" destination="5xw-li-Lod" id="fdk-Ex-iYV"/>
                         <outlet property="firstLabel" destination="xuu-Mo-VtP" id="ROe-Aq-ssy"/>
+                        <outlet property="firstTextField" destination="DaA-lP-mmT" id="WR1-sM-Zq0"/>
                         <outlet property="fourLabel" destination="0kQ-Vc-nNK" id="YgH-uF-hbK"/>
-                        <outlet property="howProduct" destination="DaA-lP-mmT" id="WR1-sM-Zq0"/>
-                        <outlet property="nicotineBase" destination="2y5-oS-2RD" id="5wf-NO-fRy"/>
-                        <outlet property="nicotineContent" destination="9Kx-fm-QRX" id="KeY-yn-rac"/>
+                        <outlet property="fourTextField" destination="2y5-oS-2RD" id="5wf-NO-fRy"/>
                         <outlet property="premixBar" destination="mfK-5C-1o7" id="gi3-1D-wFQ"/>
                         <outlet property="secondLabel" destination="Ts8-Cv-Wgb" id="cKN-Rm-0jh"/>
+                        <outlet property="secondTextField" destination="9Kx-fm-QRX" id="KeY-yn-rac"/>
                         <outlet property="simpleBaseBar" destination="UC6-9E-6zC" id="rRD-K0-Obb"/>
                         <outlet property="tabBar" destination="X3E-Gm-ba8" id="TfK-Hq-Vak"/>
                         <outlet property="thirdLabel" destination="Jfh-65-QFi" id="i5k-Bg-OhX"/>
+                        <outlet property="thirdTextField" destination="aKw-Db-0Du" id="frS-x5-UZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnM-Tx-NKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,6 +378,7 @@
     <resources>
         <image name="bar-code" width="250" height="150"/>
         <image name="moje liquidy" width="135" height="164"/>
+        <image name="refresh" width="50" height="50"/>
         <image name="stworz" width="203" height="137"/>
         <image name="tlo do kalkulator" width="396" height="208"/>
     </resources>

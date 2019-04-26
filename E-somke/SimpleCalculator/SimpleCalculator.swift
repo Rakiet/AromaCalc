@@ -34,6 +34,10 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     
     
     var allFunction = AllFunction()
+    
+    var mixLiquid = 0.0
+    
+    var sendText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +65,31 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             readyLastBase -= howNicotine
             readyNicotine = howNicotine
             readyAroma = howAroma
+            print(readyNicotine)
+            var hmmmmError = product
+            hmmmmError -= (product/100) * aroma
+            
+            print(hmmmmError)
+            if readyNicotine > hmmmmError{ //Wyrzuca błąd jeżeli ilośc dodanej nikotyny jest większe niż wolne miejsce w butelce
+                var youNeed = (nicotine/hmmmmError) * product
+                if roundTo(number: youNeed, precision: 1) == nicotine{
+                    youNeed += 0.1
+                }
+                self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nikotynowej nie można otrzymać oczekiwanego stężnia nikotyny. Twoja baza musi posiadać min \(roundTo(number: youNeed, precision: 1)) nikotyny ")
+                self.createButton.isEnabled = false
+                self.createButton.alpha = 0.6
+            } else {
+                self.createButton.isEnabled = true
+                self.createButton.alpha = 1
+                /*
+                 viewController.aroma = roundTo(number: readyAroma, precision: 1)
+                 viewController.base = roundTo(number: readyLastBase, precision: 1)
+                 viewController.nicotine = roundTo(number: readyNicotine, precision: 1)
+                 */
+                
+                
+                sendText = "\(roundTo(number: readyAroma, precision: 1)) aromatu\n\n\(roundTo(number: readyLastBase, precision: 1)) bazy bez nikotyny\n\n\(roundTo(number: readyNicotine, precision: 1)) bazy nikotynowej"
+            }
         }
         if tabBarSelected == 2 { //obliczaniePremixu
             //product = ilosc premixu
@@ -72,16 +101,28 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             readyAroma = product // ilość premixu
             
             if nicotine < readyNicotine{ //Wyrzuca błąd jeżeli ilośc dodanej nikotyny jest większe niż wolne miejsce w butelce
-                self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nie można otrzymać oczekiwanego stężnia nikotyny")
+                
+                let youNeed = (aroma/nicotine) * (product + nicotine)
+//                if roundTo(number: youNeed, precision: 1) == aroma{
+//                    youNeed += 0.1
+//                }
+                
+                self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nie można otrzymać oczekiwanego stężnia nikotyny. Musisz użyć bazy nikotynowej o stężeniu \(youNeed)")
                 self.createButton.isEnabled = false
                 self.createButton.alpha = 0.6
             } else {
                 self.createButton.isEnabled = true
                 self.createButton.alpha = 1
+                sendText = "\(roundTo(number: readyLastBase, precision: 1)) bazy bez nikotyny\n\n\(roundTo(number: readyNicotine, precision: 1)) bazy nikotynowej"
             }
             
         }
-        
+        if tabBarSelected == 3 {
+            
+            let finalProduct = (nicotine + nicotineB) / (product + aroma)
+            
+            sendText = "Twoje liquidy po zmieszaniu będą miały \(finalProduct)"
+        }
         
     }
     
@@ -98,12 +139,11 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "createLiquid") {
+        if tabBarSelected == 3{
+            allFunction.addAlert(controller: self, title: "Wynik", text: "Po połączeniu otrzymasz \(mixLiquid) mocy.")
+        } else if (segue.identifier == "createLiquid") {
              let viewController = segue.destination as! ReadyLiquidViewController
-                viewController.aroma = roundTo(number: readyAroma, precision: 1)
-                viewController.base = roundTo(number: readyLastBase, precision: 1)
-                viewController.nicotine = roundTo(number: readyNicotine, precision: 1)
-                viewController.tabBarChoose = tabBarSelected
+                viewController.text = sendText
             
         
         }
@@ -132,10 +172,14 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             
             textAnimation(text1: "Ilość premixu:", text2: "Ilość wolnego miejsca w butelce:", text3: "Ilość nikotyny w gotywym produkcje:", text4: "Baza nikotynowa jaką dyskonujesz:", text5: "ml", text6: "ml", text7: "mg/ml", text8: "mg/ml")
             tabBarSelected = 2
+            self.createButton.isEnabled = true
+            self.createButton.alpha = 1
         }else if(item.tag == 3) {
             
             textAnimation(text1: "Ilość pierwszego liquidu:", text2: "Moc pierwszego liquidu:", text3: "Ilość drugiego liquidu:", text4: "Moc drugiego liquidu:", text5: "ml", text6: "mg/ml", text7: "ml", text8: "mg/ml")
-            tabBarSelected = 2
+            tabBarSelected = 3
+            self.createButton.isEnabled = true
+            self.createButton.alpha = 1
         }
     }
     
@@ -159,6 +203,11 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
             self.secondTextField.placeholder = text6
             self.thirdTextField.placeholder = text7
             self.fourTextField.placeholder = text8
+            
+            self.firstTextField.text = ""
+            self.secondTextField.text = ""
+            self.thirdTextField.text = ""
+            self.fourTextField.text = ""
         }
         
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseInOut, animations: {

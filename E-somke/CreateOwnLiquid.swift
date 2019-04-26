@@ -26,7 +26,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     func passData(isbn: String) {
         
         self.skuLabel.text = isbn
-        
+        findSku(isbn: isbn)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,5 +38,20 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
         navigationController?.isNavigationBarHidden = false //ukrywanie navibar
         view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
     }
+    
+    func findSku(isbn: String?){
+        if let sku = isbn {
+            
+            switch sku {
+            case "3600550296020":
+                print("krem")
+            default:
+                print("brak")
+            }
+            
+            
+        }
+    }
+    
 
 }

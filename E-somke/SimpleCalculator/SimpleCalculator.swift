@@ -150,15 +150,7 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
         
     }
     
-    //ukrywanie ekranu po nacisnieciu przycisku "return" na klawiaturze
-    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
-    //ukrywanie klawiatury po kliknieciu w dowolne miejsce na ekranie
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if(item.tag == 1) {
@@ -227,5 +219,15 @@ class SimpleCalculator: UIViewController, UITextFieldDelegate, UITabBarDelegate 
         createButton.layer.backgroundColor = UIColor(red:0.11, green:0.67, blue:0.36, alpha:1.0).cgColor
         createButton.setTitleColor(UIColor.white, for: .normal)
         navigationController?.isNavigationBarHidden = false
+    }
+    
+    //ukrywanie ekranu po nacisnieciu przycisku "return" na klawiaturze
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    //ukrywanie klawiatury po kliknieciu w dowolne miejsce na ekranie
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

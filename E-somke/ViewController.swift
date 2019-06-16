@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadStyle()
+        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
 
 

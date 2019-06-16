@@ -8,12 +8,15 @@
 
 import UIKit
 import Firebase
+import Network
 
 protocol IsbnDelegate {
     func passData(isbn: String)
 }
 
 class CreateOwnLiquid: UIViewController, IsbnDelegate {
+    
+    let monitor = NWPathMonitor() //stała do sprawdzania połączenia z internetem
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addAromaButton: UIButton!
@@ -24,13 +27,19 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     
     let baseRef = Database.database().reference()
     var items: [AromaItem] = []
+    
+    var allFunction = AllFunction()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadStyle()
         if skuLabel.text! != "" {
             findSku(isbn: skuLabel.text!)
         }
+        
+        checkInternet()
     }
+    
+ 
     
     
     func passData(isbn: String) {
@@ -46,18 +55,29 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
         }else if (segue.identifier == "addAroma") {
             let viewController = segue.destination as! SaveNewAroma
             viewController.sku = skuLabel.text!
+        }else if (segue.identifier == "smartCalculator") {
+            let viewController = segue.destination as! SmartCalculator
+            
+                viewController.aromaSku = items[0].sku
+                viewController.concentrationMin = items[0].concentrationMin
+                viewController.concentrationMax = items[0].concentrationMax
+                viewController.nameAroma = items[0].aromaName
+                viewController.nameCompany = items[0].nameCompany
         }
+        
+        
+        
     }
     
     
     
     func findSku(isbn: String?){
         if let sku = isbn {
-            
+            var newItems: [AromaItem] = []
             let strSearch = sku
             baseRef.child("aroma-items").queryOrdered(byChild:  "sku").queryStarting(atValue: strSearch).queryEnding(atValue: strSearch).observeSingleEvent(of: .value, with: { (snapshot) in
                 
-                var newItems: [AromaItem] = []
+                
                 for child in snapshot.children {
                     if let snapshot = child as? DataSnapshot,
                         let aromaItem = AromaItem(snapshot: snapshot) {
@@ -71,13 +91,19 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
                     self.headLabel.text = "Wybranego produktu nie ma w bazie danych. Lecz możesz nam pomóc. Dodaj go sam. \nZ góry dziękujemy.\nZespół e-smoke oraz pozostali użytkownicy :)."
                     
                     self.addAromaButton.isHidden = false
+                    self.nextButton.isEnabled = false
+                    self.nextButton.alpha = 0.4
                 } else {
                     let item = self.items[0]
                     self.skuLabel.textColor = UIColor.black
+                    self.nextButton.isEnabled = true
+                    self.nextButton.alpha = 1
                     self.headLabel.text = "\(item.nameCompany)\nO smaku: \(item.aromaName)\n Najepsze stężenie:\nOd \(item.concentrationMin)% do \(item.concentrationMax)%"
+                    self.nextButton.isHidden = false
+                    self.addAromaButton.isHidden = true
                 }
-                
             })
+            
             
         }
     }
@@ -105,5 +131,23 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
         nextButton.isEnabled = false
         nextButton.alpha = 0.4
         addAromaButton.isHidden = true
+    }
+    
+    
+    func checkInternet(){ // funkcja sprawdzająca połączenie z internetem
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("Połączenie z internetem działa")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+                self.allFunction.addAlert(controller: self, title: "Alert", text: "Do obsługi tej funkcjonalności jest wymagane połącznie z internetem.\nPołącz się z siecią i spróbuj ponownie.")
+                
+            }
+            
+            //print(path.isExpensive)
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        //let cellMonitor = NWPathMonitor(requiredInterfaceType: .cellular)
     }
 }

@@ -28,20 +28,27 @@ class readyProduct: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
+    @IBOutlet weak var descriptionTextFile: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        headLabel.text = "Wystarczy że połączysz:\n\(String(describing: readyAroma!)) ml. aromatu \n\(String(describing: readyLastBase!)) ml. bazy 0 \n\(String(describing: readyNicotine!)) ml. bazy nikotynowej\nMiłego wapowania 😃.\n\n\nZapisz utworzony aromat aby w łatwy sposób go odtworzyć i ocenić."
+        headLabel.text = "Wystarczy że połączysz:\n\(String(describing: readyAroma!)) ml. aromatu \n\(String(describing: readyLastBase!)) ml. bazy 0 \n\(String(describing: readyNicotine!)) ml. bazy nikotynowej\nMiłego wapowania 😃.\n\n\nZapisz utworzony aromat aby w łatwy sposób go odtworzyć i ocenić. \n\nJeżeli chcesz jakoś dodatkowo opisać liquid, tutaj przygotowaliśmy dla Ciebie trochę miejsca:"
         loadStyle()
     }
     
 
     @IBAction func saveLiquid(_ sender: Any) {
-        saveOwnLiquid(nameC: nameCompany, nameA: nameAroma, sku: aromaSku, ownDescription: "brak", stars: 0)
+        if descriptionTextFile.text == ""{
+            saveOwnLiquid(nameC: nameCompany, nameA: nameAroma, sku: aromaSku, ownDescription: "", stars: 0, date: Date(), aroma: conAroma, nicotine: conNicotine)
+        } else {
+            saveOwnLiquid(nameC: nameCompany, nameA: nameAroma, sku: aromaSku, ownDescription: descriptionTextFile.text!, stars: 0, date: Date(), aroma: conAroma, nicotine: conNicotine)
+        }
+        //navigationController?.popToRootViewController(animated: true)
         
     }
     
-    func saveOwnLiquid(nameC: String, nameA: String, sku: String, ownDescription: String, stars: Int16) {
+    func saveOwnLiquid(nameC: String, nameA: String, sku: String, ownDescription: String, stars: Int16, date: Date, aroma: Double, nicotine: Double) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "MyLiquid", in: context)
@@ -51,6 +58,9 @@ class readyProduct: UIViewController {
         create.setValue(sku, forKey: "sku")
         create.setValue(stars, forKey: "stars")
         create.setValue(ownDescription, forKey: "owndescription")
+        create.setValue(date, forKey: "date")
+        create.setValue(aroma, forKey: "aroma")
+        create.setValue(nicotine, forKey: "nicotine")
         do {
             try context.save()
         } catch {

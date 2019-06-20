@@ -11,6 +11,8 @@
 		5B17461E2250DB4F00EAFDF4 /* AllFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17461D2250DB4F00EAFDF4 /* AllFunction.swift */; };
 		5B17462022510C8500EAFDF4 /* ScannerBarCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17461F22510C8500EAFDF4 /* ScannerBarCode.swift */; };
 		5B1F057222B3F362003069A4 /* HeadCollectionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057122B3F362003069A4 /* HeadCollectionTable.swift */; };
+		5B1F057422BBC38D003069A4 /* HeadCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057322BBC38D003069A4 /* HeadCollectionCell.swift */; };
+		5B1F057622BBD331003069A4 /* DetailViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057522BBD331003069A4 /* DetailViewCollection.swift */; };
 		5B31D6F92241556C00F3CCF5 /* ReadyLiquidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31D6F82241556C00F3CCF5 /* ReadyLiquidViewController.swift */; };
 		5B8F7B1B2279ED9D00105E32 /* SaveNewAroma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7B1A2279ED9D00105E32 /* SaveNewAroma.swift */; };
 		5B8F7B1D2279F1E800105E32 /* AromaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7B1C2279F1E700105E32 /* AromaItem.swift */; };
@@ -33,6 +35,8 @@
 		5B17461D2250DB4F00EAFDF4 /* AllFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFunction.swift; sourceTree = "<group>"; };
 		5B17461F22510C8500EAFDF4 /* ScannerBarCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerBarCode.swift; sourceTree = "<group>"; };
 		5B1F057122B3F362003069A4 /* HeadCollectionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadCollectionTable.swift; sourceTree = "<group>"; };
+		5B1F057322BBC38D003069A4 /* HeadCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadCollectionCell.swift; sourceTree = "<group>"; };
+		5B1F057522BBD331003069A4 /* DetailViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCollection.swift; sourceTree = "<group>"; };
 		5B31D6F82241556C00F3CCF5 /* ReadyLiquidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyLiquidViewController.swift; sourceTree = "<group>"; };
 		5B8F7B1A2279ED9D00105E32 /* SaveNewAroma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewAroma.swift; sourceTree = "<group>"; };
 		5B8F7B1C2279F1E700105E32 /* AromaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AromaItem.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				5B1F057122B3F362003069A4 /* HeadCollectionTable.swift */,
+				5B1F057322BBC38D003069A4 /* HeadCollectionCell.swift */,
+				5B1F057522BBD331003069A4 /* DetailViewCollection.swift */,
 			);
 			path = "Collection Liquid";
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8F7B1B2279ED9D00105E32 /* SaveNewAroma.swift in Sources */,
+				5B1F057422BBC38D003069A4 /* HeadCollectionCell.swift in Sources */,
 				5B1F057222B3F362003069A4 /* HeadCollectionTable.swift in Sources */,
 				5B9019FB22551F9A007A8FF0 /* CreateOwnLiquid.swift in Sources */,
 				5BF7CA89223667FF0097CE33 /* ViewController.swift in Sources */,
@@ -288,6 +295,7 @@
 				5B17462022510C8500EAFDF4 /* ScannerBarCode.swift in Sources */,
 				5BF7CA87223667FF0097CE33 /* AppDelegate.swift in Sources */,
 				5BF7CA8F223667FF0097CE33 /* E_somke.xcdatamodeld in Sources */,
+				5B1F057622BBD331003069A4 /* DetailViewCollection.swift in Sources */,
 				5B165014228041A300065363 /* SmartCalculator.swift in Sources */,
 				5B8F7B1D2279F1E800105E32 /* AromaItem.swift in Sources */,
 				5B17461E2250DB4F00EAFDF4 /* AllFunction.swift in Sources */,

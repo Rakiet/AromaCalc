@@ -10,6 +10,12 @@ import UIKit
 
 class HeadCollectionCell: UITableViewCell {
 
+    @IBOutlet weak var headLabelCell: UILabel!
+    @IBOutlet weak var dateCell: UILabel!
+    @IBOutlet weak var starsCell: UILabel!
+    @IBOutlet weak var secondLabelCell: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

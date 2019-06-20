@@ -15,16 +15,24 @@ struct DataLiquids {
     var description: String
     var stars: Int16
     var sku: String
+    var date: Date
+    var conNicotine: Double
+    var conAroma: Double
 }
 
 class HeadCollectionTable: UITableViewController {
 
     var liquidsData: [DataLiquids] = []
     
+    
+    @IBOutlet var tableViewCollection: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         readBase()
         loadStyle()
+        tableViewCollection.rowHeight = 70
+        
     }
 
     // MARK: - Table view data source
@@ -41,10 +49,37 @@ class HeadCollectionTable: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "liquidCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "liquidCell", for: indexPath) as! HeadCollectionCell
 
-         cell.textLabel?.text = liquidsData[indexPath.row].nameCompany
-
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "dd/MM/yyyy"
+        
+         cell.headLabelCell?.text = liquidsData[indexPath.row].nameCompany
+        cell.dateCell?.text = dateFormat.string(from: liquidsData[indexPath.row].date)
+        cell.secondLabelCell?.text = liquidsData[indexPath.row].nameAroma
+        
+        cell.starsCell.textColor = UIColor.black
+        cell.starsCell.font = cell.starsCell.font.withSize(23)
+            switch liquidsData[indexPath.row].stars {
+            case 1:
+                cell.starsCell?.text = "★☆☆☆☆"
+            case 2:
+                cell.starsCell?.text = "★★☆☆☆"
+            case 3:
+                cell.starsCell?.text = "★★★☆☆"
+            case 4:
+                cell.starsCell?.text = "★★★★☆"
+            case 5:
+                cell.starsCell?.text = "★★★★★"
+            default:
+                cell.starsCell.textColor = UIColor.red
+                cell.starsCell.font = cell.starsCell.font.withSize(14)
+                cell.starsCell?.text = "brak oceny"
+            }
+        
+        
+        
+        
         return cell
     }
     
@@ -93,6 +128,37 @@ class HeadCollectionTable: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "showDetail") {
+            
+            let dvc = segue.destination as! DetailViewCollection
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                
+//                dvc.sentData1 = titleList[indexPath.row] as String
+//
+//                dvc.sentData2 = descriptionList[indexPath.row] as String
+//
+//                dvc.sentData3 = imageList[indexPath.row] as String
+                
+                dvc.nameCompany = liquidsData[indexPath.row].nameCompany
+                dvc.nameAroma = liquidsData[indexPath.row].nameAroma
+                dvc.description = liquidsData[indexPath.row].description
+                dvc.stars = liquidsData[indexPath.row].stars
+                dvc.sku = liquidsData[indexPath.row].sku
+                dvc.date = liquidsData[indexPath.row].date
+                dvc.conNicotine = liquidsData[indexPath.row].conNicotine
+                dvc.conAroma = liquidsData[indexPath.row].conAroma
+                
+            }
+            
+        }
+        
+        
+        
+    }
 
     func readBase(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -107,7 +173,10 @@ class HeadCollectionTable: UITableViewController {
                 let description = data.value(forKey: "owndescription") as! String
                 let sku = data.value(forKey: "sku") as! String
                 let stars = data.value(forKey: "stars") as! Int16
-                liquidsData.append(DataLiquids(nameCompany: nCompany, nameAroma: nAroma, description: description, stars: stars, sku: sku))
+                let date = data.value(forKey: "date") as! Date
+                let nico = data.value(forKey: "nicotine") as! Double
+                let aroma = data.value(forKey: "aroma") as! Double
+                liquidsData.append(DataLiquids(nameCompany: nCompany, nameAroma: nAroma, description: description, stars: stars, sku: sku, date: date, conNicotine: nico, conAroma: aroma))
             }
         } catch {
             print("Failed")

@@ -118,11 +118,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func endOrSend(_ sender: Any) {//przycisk odpowiedialny za zakonczenie lub przesłanie zdarzenia dalej :D
-//        if let sku = barcode{
-//            self.delegate?.passData(isbn: sku)
-//        }
+        if let sku = barcode{
+            self.delegate?.passData(isbn: sku)
+        }
         
-        self.delegate?.passData(isbn: "123")
+        //self.delegate?.passData(isbn: "123")
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func refreshScaner(_ sender: Any) {

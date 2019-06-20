@@ -10,6 +10,16 @@ import UIKit
 
 class DetailViewCollection: UIViewController {
 
+    var nameCompany: String!
+    var nameAroma: String!
+    var description: String!
+    var stars: Int16!
+    var sku: String!
+    var date: Date!
+    var conNicotine: Double!
+    var conAroma: Double!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

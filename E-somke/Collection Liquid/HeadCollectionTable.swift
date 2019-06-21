@@ -58,8 +58,8 @@ class HeadCollectionTable: UITableViewController {
         cell.dateCell?.text = dateFormat.string(from: liquidsData[indexPath.row].date)
         cell.secondLabelCell?.text = liquidsData[indexPath.row].nameAroma
         
-        cell.starsCell.textColor = UIColor.black
-        cell.starsCell.font = cell.starsCell.font.withSize(23)
+//        cell.starsCell.textColor = UIColor.black
+//        cell.starsCell.font = cell.starsCell.font.withSize(23)
             switch liquidsData[indexPath.row].stars {
             case 1:
                 cell.starsCell?.text = "★☆☆☆☆"
@@ -72,9 +72,8 @@ class HeadCollectionTable: UITableViewController {
             case 5:
                 cell.starsCell?.text = "★★★★★"
             default:
-                cell.starsCell.textColor = UIColor.red
-                cell.starsCell.font = cell.starsCell.font.withSize(14)
-                cell.starsCell?.text = "brak oceny"
+                
+                cell.starsCell?.text = ""
             }
         
         
@@ -145,7 +144,7 @@ class HeadCollectionTable: UITableViewController {
                 
                 dvc.nameCompany = liquidsData[indexPath.row].nameCompany
                 dvc.nameAroma = liquidsData[indexPath.row].nameAroma
-                dvc.description = liquidsData[indexPath.row].description
+                dvc.descriptionLiquid = liquidsData[indexPath.row].description
                 dvc.stars = liquidsData[indexPath.row].stars
                 dvc.sku = liquidsData[indexPath.row].sku
                 dvc.date = liquidsData[indexPath.row].date

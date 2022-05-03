@@ -1,0 +1,198 @@
+
+/* Class = "UITextField"; placeholder = "ml"; ObjectID = "01y-PH-skP"; */
+"01y-PH-skP.placeholder" = "ml";
+
+/* Class = "UILabel"; text = "Baza nikotynowa jaką dysponujesz:"; ObjectID = "0kQ-Vc-nNK"; */
+"0kQ-Vc-nNK.text" = "Baza nikotynowa jaką dysponujesz:";
+
+/* Class = "UILabel"; text = "Dilons Awokado"; ObjectID = "2Hy-1z-E9u"; */
+"2Hy-1z-E9u.text" = "Dilons Awokado";
+
+/* Class = "UILabel"; text = "Własne stężenie"; ObjectID = "2Sv-CE-zPn"; */
+"2Sv-CE-zPn.text" = "Własne stężenie";
+
+/* Class = "UITextField"; placeholder = "mg/ml"; ObjectID = "2y5-oS-2RD"; */
+"2y5-oS-2RD.placeholder" = "mg/ml";
+
+/* Class = "UITextField"; placeholder = "np. Dilons"; ObjectID = "47d-bq-ELY"; */
+"47d-bq-ELY.placeholder" = "np. Dilons";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "4Ah-RH-K4Y"; */
+"4Ah-RH-K4Y.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "☆"; ObjectID = "5vA-eW-f0o"; */
+"5vA-eW-f0o.normalTitle" = "☆";
+
+/* Class = "UIButton"; normalTitle = "Przygotuj"; ObjectID = "5xw-li-Lod"; */
+"5xw-li-Lod.normalTitle" = "Przygotuj";
+
+/* Class = "UITabBarItem"; title = "Kalkulator"; ObjectID = "6Bt-Lt-P6j"; */
+"6Bt-Lt-P6j.title" = "Kalkulator";
+
+/* Class = "UIButton"; normalTitle = "Dalej"; ObjectID = "9Bf-go-LA7"; */
+"9Bf-go-LA7.normalTitle" = "Dalej";
+
+/* Class = "UITextField"; placeholder = "mg/ml"; ObjectID = "9Kx-fm-QRX"; */
+"9Kx-fm-QRX.placeholder" = "mg/ml";
+
+/* Class = "UIButton"; normalTitle = "☆"; ObjectID = "AFk-tO-Sg4"; */
+"AFk-tO-Sg4.normalTitle" = "☆";
+
+/* Class = "UITableViewController"; title = "Moje Liquidy"; ObjectID = "AKK-Na-CEF"; */
+"AKK-Na-CEF.title" = "Moje Liquidy";
+
+/* Class = "UIButton"; normalTitle = "☆"; ObjectID = "C6i-vx-32g"; */
+"C6i-vx-32g.normalTitle" = "☆";
+
+/* Class = "UITextField"; placeholder = "ml"; ObjectID = "DaA-lP-mmT"; */
+"DaA-lP-mmT.placeholder" = "ml";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Dld-fU-XnE"; */
+"Dld-fU-XnE.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Zapisz"; ObjectID = "FtZ-zp-Td2"; */
+"FtZ-zp-Td2.normalTitle" = "Zapisz";
+
+/* Class = "UILabel"; text = "Dilons Awokado"; ObjectID = "G8h-LH-Lvu"; */
+"G8h-LH-Lvu.text" = "Dilons Awokado";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GN5-1b-xLy"; */
+"GN5-1b-xLy.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "mg/ml"; ObjectID = "GaC-ph-GSs"; */
+"GaC-ph-GSs.placeholder" = "mg/ml";
+
+/* Class = "UITextField"; placeholder = "mg/ml"; ObjectID = "Grd-PH-Ptw"; */
+"Grd-PH-Ptw.placeholder" = "mg/ml";
+
+/* Class = "UIButton"; normalTitle = "Dalej"; ObjectID = "Hby-57-xaS"; */
+"Hby-57-xaS.normalTitle" = "Dalej";
+
+/* Class = "UIButton"; normalTitle = "Zapisz"; ObjectID = "IJZ-gO-E9g"; */
+"IJZ-gO-E9g.normalTitle" = "Zapisz";
+
+/* Class = "UILabel"; text = "Sku:"; ObjectID = "JCG-wW-Rde"; */
+"JCG-wW-Rde.text" = "Sku:";
+
+/* Class = "UILabel"; text = "Docelowe stężenie aromatu:"; ObjectID = "Jfh-65-QFi"; */
+"Jfh-65-QFi.text" = "Docelowe stężenie aromatu:";
+
+/* Class = "UITextField"; placeholder = "%"; ObjectID = "KFH-cH-xC4"; */
+"KFH-cH-xC4.placeholder" = "%";
+
+/* Class = "UITabBarItem"; title = "Połącz dwa liquidy"; ObjectID = "KjI-q0-xv0"; */
+"KjI-q0-xv0.title" = "Połącz dwa liquidy";
+
+/* Class = "UILabel"; text = "Sku:"; ObjectID = "M6n-Bg-aCy"; */
+"M6n-Bg-aCy.text" = "Sku:";
+
+/* Class = "UILabel"; text = "Baza nikotynowa jaką dysponujesz:"; ObjectID = "MeR-25-WEZ"; */
+"MeR-25-WEZ.text" = "Baza nikotynowa jaką dysponujesz:";
+
+/* Class = "UILabel"; text = "Smak aromatu:"; ObjectID = "Mz4-co-G8q"; */
+"Mz4-co-G8q.text" = "Smak aromatu:";
+
+/* Class = "UILabel"; text = "Użyj skanera kodów kreskowych, aby rozpocząć proces tworzenia liquidu."; ObjectID = "OOz-At-6eG"; */
+"OOz-At-6eG.text" = "Użyj skanera kodów kreskowych, aby rozpocząć proces tworzenia liquidu.";
+
+/* Class = "UITextField"; placeholder = "%"; ObjectID = "Oeh-sw-UM9"; */
+"Oeh-sw-UM9.placeholder" = "%";
+
+/* Class = "UIButton"; normalTitle = "Dodaj Aromat"; ObjectID = "PEx-bp-APh"; */
+"PEx-bp-APh.normalTitle" = "Dodaj Aromat";
+
+/* Class = "UILabel"; text = "Labelhkgglgygjkygkygkygkygkygkyjgjkygjygjygkygjygjy v djyrvjy syrg jyr s y sjyg"; ObjectID = "RUG-9H-6b1"; */
+"RUG-9H-6b1.text" = "Labelhkgglgygjkygkygkygkygkygkyjgjkygjygjygkygjygjy v djyrvjy syrg jyr s y sjyg";
+
+/* Class = "UIViewController"; title = "Dodawanie Aromatu/Esencji"; ObjectID = "Rrk-fz-bng"; */
+"Rrk-fz-bng.title" = "Dodawanie Aromatu/Esencji";
+
+/* Class = "UIButton"; normalTitle = "Utwórz ponownie"; ObjectID = "TTo-Iq-uG0"; */
+"TTo-Iq-uG0.normalTitle" = "Utwórz ponownie";
+
+/* Class = "UILabel"; text = "Docelowa zawartość nikotyny:"; ObjectID = "Ts8-Cv-Wgb"; */
+"Ts8-Cv-Wgb.text" = "Docelowa zawartość nikotyny:";
+
+/* Class = "UITabBarItem"; title = "Własna baza"; ObjectID = "UC6-9E-6zC"; */
+"UC6-9E-6zC.title" = "Własna baza";
+
+/* Class = "UITextField"; placeholder = "%"; ObjectID = "UU0-69-Hdr"; */
+"UU0-69-Hdr.placeholder" = "%";
+
+/* Class = "UILabel"; text = "Proponowane stężenie:"; ObjectID = "W6y-fq-g8S"; */
+"W6y-fq-g8S.text" = "Proponowane stężenie:";
+
+/* Class = "UIButton"; normalTitle = "☆"; ObjectID = "Zh4-zC-2BK"; */
+"Zh4-zC-2BK.normalTitle" = "☆";
+
+/* Class = "UITextField"; placeholder = "%"; ObjectID = "aKw-Db-0Du"; */
+"aKw-Db-0Du.placeholder" = "%";
+
+/* Class = "UITabBarItem"; title = "Stwórz Liquid"; ObjectID = "b7h-rJ-lGn"; */
+"b7h-rJ-lGn.title" = "Stwórz Liquid";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cDa-uC-ZVO"; */
+"cDa-uC-ZVO.text" = "Label";
+
+/* Class = "UIViewController"; title = "Stwórz Liquid"; ObjectID = "eYC-zz-7W3"; */
+"eYC-zz-7W3.title" = "Stwórz Liquid";
+
+/* Class = "UITabBarItem"; title = "Moje Liquidy"; ObjectID = "fT3-Wu-Rws"; */
+"fT3-Wu-Rws.title" = "Moje Liquidy";
+
+/* Class = "UILabel"; text = "Dilons Awokado"; ObjectID = "gd1-p0-JIx"; */
+"gd1-p0-JIx.text" = "Dilons Awokado";
+
+/* Class = "UIButton"; normalTitle = "☆"; ObjectID = "hdc-Wu-ZwT"; */
+"hdc-Wu-ZwT.normalTitle" = "☆";
+
+/* Class = "UIViewController"; title = "Kalkulator"; ObjectID = "im9-s2-MJy"; */
+"im9-s2-MJy.title" = "Kalkulator";
+
+/* Class = "UITabBarItem"; title = "Premix"; ObjectID = "mfK-5C-1o7"; */
+"mfK-5C-1o7.title" = "Premix";
+
+/* Class = "UILabel"; text = "2-05-2019"; ObjectID = "orF-0T-lA3"; */
+"orF-0T-lA3.text" = "2-05-2019";
+
+/* Class = "UILabel"; text = "Dilons Awokado"; ObjectID = "qjV-Gr-SmD"; */
+"qjV-Gr-SmD.text" = "Dilons Awokado";
+
+/* Class = "UILabel"; text = "☆☆☆★★"; ObjectID = "sQC-Be-Nx2"; */
+"sQC-Be-Nx2.text" = "☆☆☆★★";
+
+/* Class = "UILabel"; text = "🍒  000%"; ObjectID = "sf7-Xb-CZ1"; */
+"sf7-Xb-CZ1.text" = "🍒  000%";
+
+/* Class = "UIButton"; normalTitle = "Zapisz"; ObjectID = "tMk-Sh-GIt"; */
+"tMk-Sh-GIt.normalTitle" = "Zapisz";
+
+/* Class = "UILabel"; text = "Stężenie aromatu:"; ObjectID = "uCU-sW-OoL"; */
+"uCU-sW-OoL.text" = "Stężenie aromatu:";
+
+/* Class = "UILabel"; text = "Ilość gotowego produktu:"; ObjectID = "vZS-7O-rjg"; */
+"vZS-7O-rjg.text" = "Ilość gotowego produktu:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vux-bl-nrd"; */
+"vux-bl-nrd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "🚬  000%"; ObjectID = "wJd-I5-ZD6"; */
+"wJd-I5-ZD6.text" = "🚬  000%";
+
+/* Class = "UILabel"; text = "Ilość gotowego produktu:"; ObjectID = "xuu-Mo-VtP"; */
+"xuu-Mo-VtP.text" = "Ilość gotowego produktu:";
+
+/* Class = "UILabel"; text = "Zawartość nikotyny:"; ObjectID = "xv8-pt-xQH"; */
+"xv8-pt-xQH.text" = "Zawartość nikotyny:";
+
+/* Class = "UITextField"; placeholder = "np. gruszka"; ObjectID = "y6U-hV-z5E"; */
+"y6U-hV-z5E.placeholder" = "np. gruszka";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "z50-x8-jOA"; */
+"z50-x8-jOA.text" = "Label";
+
+/* Class = "UILabel"; text = "Producent:"; ObjectID = "z5U-l2-49T"; */
+"z5U-l2-49T.text" = "Producent:";
+
+/* Class = "UILabel"; text = "Dodatkowe informacje:"; ObjectID = "z9t-IX-H49"; */
+"z9t-IX-H49.text" = "Dodatkowe informacje:";

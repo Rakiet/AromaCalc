@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wfR-v6-5xz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="REo-b7-vXf">
+            <objects>
+                <viewController id="wfR-v6-5xz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DED-ZK-aoD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acczystetlo" translatesAutoresizingMaskIntoConstraints="NO" id="xAx-F4-Qvi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rakieticonodreczne" translatesAutoresizingMaskIntoConstraints="NO" id="5my-Qb-u1w">
+                                <rect key="frame" x="137.5" y="607" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Sco-Gg-L71"/>
+                                    <constraint firstAttribute="height" constant="40" id="vnL-TG-ASC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xAx-F4-Qvi" firstAttribute="leading" secondItem="DED-ZK-aoD" secondAttribute="leading" id="74c-Dq-Qx9"/>
+                            <constraint firstItem="xAx-F4-Qvi" firstAttribute="bottom" secondItem="RRL-YF-xNu" secondAttribute="bottom" id="8WM-QN-pmg"/>
+                            <constraint firstAttribute="trailing" secondItem="xAx-F4-Qvi" secondAttribute="trailing" id="H9c-FT-khS"/>
+                            <constraint firstItem="xAx-F4-Qvi" firstAttribute="top" secondItem="DED-ZK-aoD" secondAttribute="top" id="Z08-mr-hMU"/>
+                            <constraint firstItem="RRL-YF-xNu" firstAttribute="bottom" secondItem="5my-Qb-u1w" secondAttribute="bottom" constant="20" id="bNk-h6-oeN"/>
+                            <constraint firstItem="xAx-F4-Qvi" firstAttribute="centerX" secondItem="5my-Qb-u1w" secondAttribute="centerX" id="o5w-Qq-klk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RRL-YF-xNu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McK-67-Y78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="81.409295352323838"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="acczystetlo" width="1242" height="2688"/>
+        <image name="rakieticonodreczne" width="375" height="188"/>
+    </resources>
+</document>

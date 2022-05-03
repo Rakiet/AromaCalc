@@ -19,6 +19,7 @@ class SaveNewAroma: UIViewController, UITextFieldDelegate, UITabBarDelegate {
     @IBOutlet weak var aromaNameTextField: UITextField!
     @IBOutlet weak var minConcentrationOfAromaTextField: UITextField!
     @IBOutlet weak var maxConcentrationOfAromaTextField: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
     
     let ref = Database.database().reference(withPath: "aroma-items")
     let baseRef = Database.database().reference()
@@ -34,20 +35,24 @@ class SaveNewAroma: UIViewController, UITextFieldDelegate, UITabBarDelegate {
         self.aromaNameTextField.delegate = self
         self.minConcentrationOfAromaTextField.delegate = self
         self.maxConcentrationOfAromaTextField.delegate = self
+        loadStyle()
     }
     
 
   
     @IBAction func saveButton(_ sender: Any) {
         guard let minConce = Int(minConcentrationOfAromaTextField.text!), let maxConce = Int(maxConcentrationOfAromaTextField.text!), let aromaName =  aromaNameTextField.text, let companyName = companyNameTextField.text else{
-            allFunction.addAlert(controller: self, title: "Błąd", text: "Proszę uzupełnić wszystie pola. \nDziękuje :)")
+            allFunction.addAlert(controller: self, title: "Błąd", text: "Proszę uzupełnić wszystkie pola. \nDziękuję :)")
             return
         }
         defer{
             navigationController?.popViewController(animated: true)
         }
-        if minConce >= maxConce {
-            allFunction.addAlert(controller: self, title: "Błąd", text: "Maksymalna stężenie musi być większe niż minimalne.")
+        if maxConce > 25{
+            allFunction.addAlert(controller: self, title: "Błąd", text: "Maksymalne stężenie nie może przekraczać 25%")
+        } else if minConce >= maxConce {
+            allFunction.addAlert(controller: self, title: "Błąd", text: "Maksymalne stężenie musi być większe niż minimalne.")
+            
         } else {
             //let minConce = Int(minConcentrationOfAromaTextField.text!)
             //let maxConce = Int(maxConcentrationOfAromaTextField.text!)
@@ -99,5 +104,14 @@ class SaveNewAroma: UIViewController, UITextFieldDelegate, UITabBarDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func loadStyle() {
+        saveButtonOutlet.layer.cornerRadius = 12
+        saveButtonOutlet.layer.backgroundColor = UIColor(red:0.00, green:0.60, blue:0.40, alpha:1.0).cgColor
+        saveButtonOutlet.setTitleColor(UIColor.white, for: .normal)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red:0.00, green:0.60, blue:0.40, alpha:1.0)]
+    }
+    
+   
     
 }

@@ -25,13 +25,14 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var skuLabel: UITextField!
     
-    let baseRef = Database.database().reference()
+    
     var items: [AromaItem] = []
     
     var allFunction = AllFunction()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadStyle()
+        skuLabel.text = ""
         if skuLabel.text! != "" {
             findSku(isbn: skuLabel.text!)
         }
@@ -72,6 +73,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     
     
     func findSku(isbn: String?){
+        let baseRef = Database.database().reference()
         if let sku = isbn {
             var newItems: [AromaItem] = []
             let strSearch = sku
@@ -88,7 +90,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
                 self.items = newItems
                 if self.items.isEmpty{
                     self.skuLabel.textColor = UIColor.red
-                    self.headLabel.text = "Wybranego produktu nie ma w bazie danych. Lecz możesz nam pomóc. Dodaj go sam. \nZ góry dziękujemy.\nZespół e-smoke oraz pozostali użytkownicy :)."
+                    self.headLabel.text = "Wybrany produkt nie znajduje się jeszcze w bazie danych. \nMożesz nam pomóc dodając go."
                     
                     self.addAromaButton.isHidden = false
                     self.nextButton.isEnabled = false
@@ -98,7 +100,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
                     self.skuLabel.textColor = UIColor.black
                     self.nextButton.isEnabled = true
                     self.nextButton.alpha = 1
-                    self.headLabel.text = "\(item.nameCompany)\nO smaku: \(item.aromaName)\n Najepsze stężenie:\nOd \(item.concentrationMin)% do \(item.concentrationMax)%"
+                    self.headLabel.text = "\(item.nameCompany)\nSmak: \(item.aromaName)\n Zalecane stężenie: \(item.concentrationMin)% - \(item.concentrationMax)%"
                     self.nextButton.isHidden = false
                     self.addAromaButton.isHidden = true
                 }
@@ -117,10 +119,10 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
 
     func loadStyle(){
         navigationController?.isNavigationBarHidden = false //ukrywanie navibar
-        view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
+        //view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
         
         nextButton.layer.cornerRadius = 12
-        nextButton.layer.backgroundColor = UIColor(red:0.11, green:0.67, blue:0.36, alpha:1.0).cgColor
+        nextButton.layer.backgroundColor = UIColor(red:0.00, green:0.60, blue:0.40, alpha:1.0).cgColor
         nextButton.setTitleColor(UIColor.white, for: .normal)
         addAromaButton.layer.cornerRadius = 12
         addAromaButton.layer.backgroundColor = UIColor(red:0.00, green:0.66, blue:0.95, alpha:1.0).cgColor
@@ -150,4 +152,6 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
         monitor.start(queue: queue)
         //let cellMonitor = NWPathMonitor(requiredInterfaceType: .cellular)
     }
+    
+
 }

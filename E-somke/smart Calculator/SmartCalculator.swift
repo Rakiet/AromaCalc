@@ -21,11 +21,12 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nextButton: UIButton!
     
     //zmienne pobierne z widoku
-    @IBOutlet weak var readyProduct: UITextField!
+    @IBOutlet weak var readyProductTextField: UITextField!
     @IBOutlet weak var nicotine: UITextField!
     @IBOutlet weak var manualAroma: UITextField!
     @IBOutlet weak var aromaSlider: UISlider!
     @IBOutlet weak var nicotineBase: UITextField!
+    @IBOutlet weak var marginSize: NSLayoutConstraint!
     
     //zmienne otrzymane z poprzedniego ekranu
     var nameCompany: String?
@@ -33,6 +34,12 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
     var concentrationMin: Int?
     var concentrationMax: Int?
     var aromaSku: String?
+    
+    // zmienna dodatkowe potrzebne do ponownego przygotowania
+    
+    var createAgain: Bool? = false
+    var readyNicotinCon: Double?
+    var readyAromaCon: Double?
     
     // zmienne  pomocnicze
     
@@ -44,13 +51,14 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(nameCompany!,nameAroma!,concentrationMin!,concentrationMax!,aromaSku!)
+        
         startSettings()
-        
-        
+        createAgainFunc()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
         
         
     }
@@ -93,8 +101,10 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func liquidComponents() {
+        changeToDot()
+        
         var aromaC = 0.0
-        guard let readyP = Double(readyProduct.text!) else {return}//ilosc gotowego produktu
+        guard let readyP = Double(readyProductTextField.text!) else {return}//ilosc gotowego produktu
         guard let nico = Double(nicotine.text!) else {return}// nikotyna w gotowym liquidzie
         guard let nicoB = Double(nicotineBase.text!) else {return}// baza nikotynowa
         if ownAroma.isOn {
@@ -124,7 +134,11 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
             if roundToDouble(number: youNeed, precision: 1) == nico{
                 youNeed += 0.1
             }
-            self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nikotynowej nie można otrzymać oczekiwanego stężnia nikotyny. Twoja baza musi posiadać min \(roundToDouble(number: youNeed, precision: 1)) nikotyny ")
+            if youNeed < 0 {
+                self.allFunction.addAlert(controller: self, title: "Błąd", text: "Dane są nieprawidłowe.")
+            } else{
+            self.allFunction.addAlert(controller: self, title: "Błąd", text: "Z podanej bazy nikotynowej nie można otrzymać oczekiwanego stężenia nikotyny. Twoja baza musi posiadać min \(roundToDouble(number: youNeed, precision: 1))mg/ml nikotyny ")
+            }
 //            self.createButton.isEnabled = false
 //            self.createButton.alpha = 0.6
         } else {
@@ -137,6 +151,7 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
            print("\(roundToDouble(number: readyAroma, precision: 1)) aromatu\n\n\(roundToDouble(number: readyLastBase, precision: 1)) bazy bez nikotyny\n\n\(roundToDouble(number: readyNicotine, precision: 1)) bazy nikotynowej")
         }
     }
+    
     
     //przekazywanie danych na kolejny ekran
     
@@ -213,7 +228,7 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
         headLabel.text = "\(nCompany)\n\(nAroma)"
         
         
-        self.readyProduct.delegate = self
+        self.readyProductTextField.delegate = self
         self.nicotine.delegate = self
         self.nicotineBase.delegate = self
         self.manualAroma.delegate = self
@@ -222,9 +237,9 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
         nextButton.alpha = 0.4
         
         //loading style
-        
+        navigationController?.isNavigationBarHidden = false
         nextButton.layer.cornerRadius = 12
-        nextButton.layer.backgroundColor = UIColor(red:0.11, green:0.67, blue:0.36, alpha:1.0).cgColor
+        nextButton.layer.backgroundColor = UIColor(red:0.00, green:0.60, blue:0.40, alpha:1.0).cgColor
         nextButton.setTitleColor(UIColor.white, for: .normal)
     }
     
@@ -235,7 +250,8 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
                 
-                let aaa = view.frame.height - nicotineBase.frame.origin.y - keyboardSize.height
+                let aaa = keyboardSize.height + marginSize.constant.distance(to: view.frame.minY)
+                print(marginSize.constant.distance(to: view.frame.minY))
                 self.view.frame.origin.y -= aaa
                 
                 
@@ -249,5 +265,65 @@ class SmartCalculator: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func changeToDot() {
+        var ready = ""
+        for i in readyProductTextField.text!{
+            if i == ","{
+                ready += "."
+            }else{
+            ready += "\(i)"
+        
+            }
+        
+        }
+        readyProductTextField.text = ready
+        ready = ""
+        for i in nicotine.text!{
+            if i == ","{
+                ready += "."
+            }else{
+                ready += "\(i)"
+                
+            }
+            
+        }
+        nicotine.text = ready
+        ready = ""
+        
+        for i in manualAroma.text!{
+            if i == ","{
+                ready += "."
+            }else{
+                ready += "\(i)"
+                
+            }
+            
+        }
+        manualAroma.text = ready
+        ready = ""
+        
+        for i in nicotineBase.text!{
+            if i == ","{
+                ready += "."
+            }else{
+                ready += "\(i)"
+                
+            }
+            
+        }
+        nicotineBase.text = ready
+        ready = ""
+    }
+    
+    func createAgainFunc() {
+        if createAgain!{
+            ownAroma.isOn = true
+            onOffOwnAroma(ownAroma)
+            nicotine.text = String(readyNicotinCon!)
+            manualAroma.text = String(readyAromaCon!)
+        }
+    }
+    
+
     
 }

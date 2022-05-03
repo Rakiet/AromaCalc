@@ -122,7 +122,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             self.delegate?.passData(isbn: sku)
         }
         
-        //self.delegate?.passData(isbn: "123")
+        //self.delegate?.passData(isbn: "1223")
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func refreshScaner(_ sender: Any) {
@@ -142,7 +142,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         refreshButton.layer.cornerRadius = 25
         
         if let _ = barcode{
-            mainButton.layer.backgroundColor = UIColor(red:0.00, green:0.63, blue:0.03, alpha:1.0).cgColor
+            mainButton.layer.backgroundColor = UIColor(red:0.00, green:0.60, blue:0.40, alpha:1.0).cgColor
             mainButton.setTitle("Zatwierdź", for: .normal)
             
             skuLabel.isHidden = false

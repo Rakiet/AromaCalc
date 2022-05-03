@@ -27,11 +27,13 @@ class HeadCollectionTable: UITableViewController {
     
     @IBOutlet var tableViewCollection: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        readBase()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadTable()
         loadStyle()
-        tableViewCollection.rowHeight = 70
+        tableViewCollection.rowHeight = 80
+        
         
     }
 
@@ -82,52 +84,6 @@ class HeadCollectionTable: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "showDetail") {
@@ -150,13 +106,20 @@ class HeadCollectionTable: UITableViewController {
                 dvc.date = liquidsData[indexPath.row].date
                 dvc.conNicotine = liquidsData[indexPath.row].conNicotine
                 dvc.conAroma = liquidsData[indexPath.row].conAroma
-                
+                dvc.indexNumber = indexPath.row
+                print(indexPath.row)
             }
             
         }
         
         
         
+    }
+    
+    func loadTable(){
+        liquidsData.removeAll()
+        readBase()
+        tableView.reloadData()
     }
 
     func readBase(){
@@ -184,6 +147,7 @@ class HeadCollectionTable: UITableViewController {
     
     func loadStyle(){
         navigationController?.isNavigationBarHidden = false //ukrywanie navibar
+        self.navigationItem.title = "Moje Liquidy"
         view.backgroundColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)
     }
 }

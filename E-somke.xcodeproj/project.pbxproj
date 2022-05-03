@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,47 +13,47 @@
 		5B1F057222B3F362003069A4 /* HeadCollectionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057122B3F362003069A4 /* HeadCollectionTable.swift */; };
 		5B1F057422BBC38D003069A4 /* HeadCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057322BBC38D003069A4 /* HeadCollectionCell.swift */; };
 		5B1F057622BBD331003069A4 /* DetailViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F057522BBD331003069A4 /* DetailViewCollection.swift */; };
-		5B31D6F92241556C00F3CCF5 /* ReadyLiquidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31D6F82241556C00F3CCF5 /* ReadyLiquidViewController.swift */; };
+		5B5E356C22DE77040051A3FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E356B22DE77040051A3FF /* ViewController.swift */; };
 		5B8F7B1B2279ED9D00105E32 /* SaveNewAroma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7B1A2279ED9D00105E32 /* SaveNewAroma.swift */; };
 		5B8F7B1D2279F1E800105E32 /* AromaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7B1C2279F1E700105E32 /* AromaItem.swift */; };
 		5B9019FB22551F9A007A8FF0 /* CreateOwnLiquid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9019FA22551F9A007A8FF0 /* CreateOwnLiquid.swift */; };
 		5BA6ECFE227493970095AC55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BA6ECFD227493970095AC55 /* GoogleService-Info.plist */; };
+		5BC2442022EA2C6600870D57 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2441F22EA2C6600870D57 /* Storyboard.storyboard */; };
 		5BCFB48322B28CF800F60E91 /* readyProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFB48222B28CF800F60E91 /* readyProduct.swift */; };
 		5BF7CA87223667FF0097CE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7CA86223667FF0097CE33 /* AppDelegate.swift */; };
-		5BF7CA89223667FF0097CE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7CA88223667FF0097CE33 /* ViewController.swift */; };
 		5BF7CA8C223667FF0097CE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7CA8A223667FF0097CE33 /* Main.storyboard */; };
 		5BF7CA8F223667FF0097CE33 /* E_somke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7CA8D223667FF0097CE33 /* E_somke.xcdatamodeld */; };
 		5BF7CA91223668020097CE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7CA90223668020097CE33 /* Assets.xcassets */; };
-		5BF7CA94223668020097CE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7CA92223668020097CE33 /* LaunchScreen.storyboard */; };
 		5BF7CA9C223BB1520097CE33 /* SimpleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7CA9B223BB1510097CE33 /* SimpleCalculator.swift */; };
-		A551F3D3B123ABBA50C6BBCF /* Pods_E_somke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F790F028AE441D29A17B6322 /* Pods_E_somke.framework */; };
+		E1565F1909DD0417350160E7 /* Pods_E_somke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3D602BA168D971427DCA34 /* Pods_E_somke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49FAE0BCF8D47D13A5D66FBE /* Pods-E-somke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-somke.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-somke/Pods-E-somke.release.xcconfig"; sourceTree = "<group>"; };
+		4A6089E0B8E2A4156B9A57AE /* Pods-E-somke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-somke.debug.xcconfig"; path = "Target Support Files/Pods-E-somke/Pods-E-somke.debug.xcconfig"; sourceTree = "<group>"; };
+		4B3D602BA168D971427DCA34 /* Pods_E_somke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_somke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B165013228041A300065363 /* SmartCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCalculator.swift; sourceTree = "<group>"; };
 		5B17461D2250DB4F00EAFDF4 /* AllFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFunction.swift; sourceTree = "<group>"; };
 		5B17461F22510C8500EAFDF4 /* ScannerBarCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerBarCode.swift; sourceTree = "<group>"; };
 		5B1F057122B3F362003069A4 /* HeadCollectionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadCollectionTable.swift; sourceTree = "<group>"; };
 		5B1F057322BBC38D003069A4 /* HeadCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadCollectionCell.swift; sourceTree = "<group>"; };
 		5B1F057522BBD331003069A4 /* DetailViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCollection.swift; sourceTree = "<group>"; };
-		5B31D6F82241556C00F3CCF5 /* ReadyLiquidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyLiquidViewController.swift; sourceTree = "<group>"; };
+		5B5AEB7622F03DD200099D7B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		5B5E356B22DE77040051A3FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B8F7B1A2279ED9D00105E32 /* SaveNewAroma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewAroma.swift; sourceTree = "<group>"; };
 		5B8F7B1C2279F1E700105E32 /* AromaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AromaItem.swift; sourceTree = "<group>"; };
 		5B9019FA22551F9A007A8FF0 /* CreateOwnLiquid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOwnLiquid.swift; sourceTree = "<group>"; };
 		5BA6ECFD227493970095AC55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5BC2441C22E4C93100870D57 /* E-somke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E-somke.entitlements"; sourceTree = "<group>"; };
+		5BC2441F22EA2C6600870D57 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		5BCFB48222B28CF800F60E91 /* readyProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readyProduct.swift; sourceTree = "<group>"; };
 		5BF7CA83223667FF0097CE33 /* E-somke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-somke.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF7CA86223667FF0097CE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BF7CA88223667FF0097CE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BF7CA8B223667FF0097CE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BF7CA8E223667FF0097CE33 /* E_somke.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = E_somke.xcdatamodel; sourceTree = "<group>"; };
 		5BF7CA90223668020097CE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BF7CA93223668020097CE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF7CA95223668020097CE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF7CA9B223BB1510097CE33 /* SimpleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalculator.swift; sourceTree = "<group>"; };
-		A963CA8D3FD08B2D190EDB2B /* Pods-E-somke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-somke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-somke/Pods-E-somke.debug.xcconfig"; sourceTree = "<group>"; };
-		F790F028AE441D29A17B6322 /* Pods_E_somke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_somke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF3912C6641BE1A51C5A34F /* Pods-E-somke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-somke.release.xcconfig"; path = "Target Support Files/Pods-E-somke/Pods-E-somke.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A551F3D3B123ABBA50C6BBCF /* Pods_E_somke.framework in Frameworks */,
+				E1565F1909DD0417350160E7 /* Pods_E_somke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12DA771BA2BB1BF79EB50286 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B3D602BA168D971427DCA34 /* Pods_E_somke.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		486604DBBB9BA872D66D4D40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A6089E0B8E2A4156B9A57AE /* Pods-E-somke.debug.xcconfig */,
+				ECF3912C6641BE1A51C5A34F /* Pods-E-somke.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B165011228040CA00065363 /* smart Calculator */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				5BF7CA9B223BB1510097CE33 /* SimpleCalculator.swift */,
-				5B31D6F82241556C00F3CCF5 /* ReadyLiquidViewController.swift */,
 			);
 			path = SimpleCalculator;
 			sourceTree = "<group>";
@@ -113,8 +129,8 @@
 			children = (
 				5BF7CA85223667FF0097CE33 /* E-somke */,
 				5BF7CA84223667FF0097CE33 /* Products */,
-				DA173D9BD7CF79EB56D8AF2E /* Pods */,
-				DA6A74C728632CBACEA1BF5E /* Frameworks */,
+				486604DBBB9BA872D66D4D40 /* Pods */,
+				12DA771BA2BB1BF79EB50286 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,37 +145,21 @@
 		5BF7CA85223667FF0097CE33 /* E-somke */ = {
 			isa = PBXGroup;
 			children = (
+				5BC2441C22E4C93100870D57 /* E-somke.entitlements */,
 				5BF7CA86223667FF0097CE33 /* AppDelegate.swift */,
 				5B1650122280410C00065363 /* other file */,
-				5BF7CA88223667FF0097CE33 /* ViewController.swift */,
 				5BF7CA8A223667FF0097CE33 /* Main.storyboard */,
+				5BC2441F22EA2C6600870D57 /* Storyboard.storyboard */,
+				5B5E356B22DE77040051A3FF /* ViewController.swift */,
 				5BF7CA90223668020097CE33 /* Assets.xcassets */,
 				5BCFB48522B3F23B00F60E91 /* Collection Liquid */,
 				5B165011228040CA00065363 /* smart Calculator */,
 				5B31D6FA2241559700F3CCF5 /* SimpleCalculator */,
-				5BF7CA92223668020097CE33 /* LaunchScreen.storyboard */,
 				5BF7CA95223668020097CE33 /* Info.plist */,
 				5BA6ECFD227493970095AC55 /* GoogleService-Info.plist */,
 				5BF7CA8D223667FF0097CE33 /* E_somke.xcdatamodeld */,
 			);
 			path = "E-somke";
-			sourceTree = "<group>";
-		};
-		DA173D9BD7CF79EB56D8AF2E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A963CA8D3FD08B2D190EDB2B /* Pods-E-somke.debug.xcconfig */,
-				49FAE0BCF8D47D13A5D66FBE /* Pods-E-somke.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DA6A74C728632CBACEA1BF5E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F790F028AE441D29A17B6322 /* Pods_E_somke.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BF7CA98223668020097CE33 /* Build configuration list for PBXNativeTarget "E-somke" */;
 			buildPhases = (
-				11035C2EF797E034509D3F95 /* [CP] Check Pods Manifest.lock */,
+				5559AA92278E6F84FE731FCD /* [CP] Check Pods Manifest.lock */,
 				5BF7CA7F223667FF0097CE33 /* Sources */,
 				5BF7CA80223667FF0097CE33 /* Frameworks */,
 				5BF7CA81223667FF0097CE33 /* Resources */,
-				DB09D7F8254A0A98F2CB943C /* [CP] Embed Pods Frameworks */,
+				31DA6D28E65EF1D6FB2430C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,11 +191,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Piotr Żakieta";
 				TargetAttributes = {
 					5BF7CA82223667FF0097CE33 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -206,6 +211,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 5BF7CA7A223667FF0097CE33;
 			productRefGroup = 5BF7CA84223667FF0097CE33 /* Products */;
@@ -222,60 +228,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF7CA94223668020097CE33 /* LaunchScreen.storyboard in Resources */,
 				5BF7CA91223668020097CE33 /* Assets.xcassets in Resources */,
 				5BF7CA8C223667FF0097CE33 /* Main.storyboard in Resources */,
 				5BA6ECFE227493970095AC55 /* GoogleService-Info.plist in Resources */,
+				5BC2442022EA2C6600870D57 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11035C2EF797E034509D3F95 /* [CP] Check Pods Manifest.lock */ = {
+		31DA6D28E65EF1D6FB2430C4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E-somke/Pods-E-somke-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E-somke/Pods-E-somke-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E-somke/Pods-E-somke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5559AA92278E6F84FE731FCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-E-somke-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB09D7F8254A0A98F2CB943C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-E-somke/Pods-E-somke-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-somke/Pods-E-somke-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -285,12 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5E356C22DE77040051A3FF /* ViewController.swift in Sources */,
 				5B8F7B1B2279ED9D00105E32 /* SaveNewAroma.swift in Sources */,
 				5B1F057422BBC38D003069A4 /* HeadCollectionCell.swift in Sources */,
 				5B1F057222B3F362003069A4 /* HeadCollectionTable.swift in Sources */,
 				5B9019FB22551F9A007A8FF0 /* CreateOwnLiquid.swift in Sources */,
-				5BF7CA89223667FF0097CE33 /* ViewController.swift in Sources */,
-				5B31D6F92241556C00F3CCF5 /* ReadyLiquidViewController.swift in Sources */,
 				5BF7CA9C223BB1520097CE33 /* SimpleCalculator.swift in Sources */,
 				5B17462022510C8500EAFDF4 /* ScannerBarCode.swift in Sources */,
 				5BF7CA87223667FF0097CE33 /* AppDelegate.swift in Sources */,
@@ -310,16 +308,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				5BF7CA8B223667FF0097CE33 /* Base */,
+				5B5AEB7622F03DD200099D7B /* pl */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BF7CA92223668020097CE33 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BF7CA93223668020097CE33 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -329,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -351,6 +343,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -376,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -390,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -412,6 +406,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -431,9 +426,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -443,39 +439,49 @@
 		};
 		5BF7CA99223668020097CE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A963CA8D3FD08B2D190EDB2B /* Pods-E-somke.debug.xcconfig */;
+			baseConfigurationReference = 4A6089E0B8E2A4156B9A57AE /* Pods-E-somke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "E-somke/E-somke.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = BN8865DEPV;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = "E-somke/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zakieta.E-somke";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5BF7CA9A223668020097CE33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FAE0BCF8D47D13A5D66FBE /* Pods-E-somke.release.xcconfig */;
+			baseConfigurationReference = ECF3912C6641BE1A51C5A34F /* Pods-E-somke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "E-somke/E-somke.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = BN8865DEPV;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = "E-somke/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zakieta.E-somke";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

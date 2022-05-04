@@ -121,7 +121,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if let sku = barcode{
             self.delegate?.passData(isbn: sku)
         }
-        
         //self.delegate?.passData(isbn: "1223")
         self.navigationController?.popViewController(animated: true)
     }

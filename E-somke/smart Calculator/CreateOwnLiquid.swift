@@ -27,12 +27,13 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     
     
     var items: [AromaItem] = []
+    var skuProduct:String?
     
     var allFunction = AllFunction()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadStyle()
-        skuLabel.text = ""
+        //skuLabel.text = ""
         if skuLabel.text! != "" {
             findSku(isbn: skuLabel.text!)
         }
@@ -46,6 +47,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
     func passData(isbn: String) {
         
         self.skuLabel.text = isbn
+        skuProduct = isbn
         findSku(isbn: isbn)
     }
 
@@ -55,7 +57,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
             destVC.delegate = self
         }else if (segue.identifier == "addAroma") {
             let viewController = segue.destination as! SaveNewAroma
-            viewController.sku = skuLabel.text!
+            viewController.sku = skuProduct
         }else if (segue.identifier == "smartCalculator") {
             let viewController = segue.destination as! SmartCalculator
             
@@ -88,6 +90,7 @@ class CreateOwnLiquid: UIViewController, IsbnDelegate {
                 }
                 
                 self.items = newItems
+                print("xxxxxxxxx\(self.items)")
                 if self.items.isEmpty{
                     self.skuLabel.textColor = UIColor.red
                     self.headLabel.text = "Wybrany produkt nie znajduje się jeszcze w bazie danych. \nMożesz nam pomóc dodając go."

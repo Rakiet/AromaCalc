@@ -63,7 +63,12 @@ class SaveNewAroma: UIViewController, UITextFieldDelegate, UITabBarDelegate {
             
             let groceryItemRef = self.ref.child(text.lowercased())
         
-            groceryItemRef.setValue(groceryItem.toAnyObject())
+            print("xdxdxdxdxdxd")
+            print("SKU:\(sku ?? "brak")")
+            DispatchQueue.main.async {
+                groceryItemRef.setValue(groceryItem.toAnyObject())
+            }
+            
         }}
     
     func fail(){
